@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="buttonsPress"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="buttonMC" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="buttonMR" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="button0" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="button7" alignment="0" max="32767" attributes="0"/>
+                          <Component id="button4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="button1" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="button2" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="button5" max="32767" attributes="0"/>
+                          <Component id="button8" min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="buttonBackspace" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="buttonLimpaTermo" min="-2" pref="50" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="button3" max="32767" attributes="0"/>
+                  <Component id="button6" max="32767" attributes="0"/>
+                  <Component id="button9" max="32767" attributes="0"/>
+                  <Component id="buttonPontoFlutuante" max="32767" attributes="0"/>
+                  <Component id="buttonLimpaTudo" max="32767" attributes="0"/>
+                  <Component id="buttonMS" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonAdicao" pref="50" max="32767" attributes="0"/>
+                  <Component id="buttonSubtracao" pref="50" max="32767" attributes="0"/>
+                  <Component id="buttonMultiplicacao" pref="50" max="32767" attributes="0"/>
+                  <Component id="buttonInverteSinal" pref="50" max="32767" attributes="0"/>
+                  <Component id="buttonMPlus" pref="50" max="32767" attributes="0"/>
+                  <Component id="buttonDivisao" alignment="0" pref="50" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonRaizQuadrada" max="32767" attributes="0"/>
+                  <Component id="buttonIgual" max="32767" attributes="0"/>
+                  <Component id="buttonInverteNumero" max="32767" attributes="0"/>
+                  <Component id="buttonPorcentagem" max="32767" attributes="0"/>
+                  <Component id="buttonMLess" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+          <Component id="fieldDisplay" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="fieldDisplay" min="-2" pref="71" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonMC" max="32767" attributes="0"/>
+                  <Component id="buttonMR" max="32767" attributes="0"/>
+                  <Component id="buttonMS" max="32767" attributes="0"/>
+                  <Component id="buttonMPlus" max="32767" attributes="0"/>
+                  <Component id="buttonMLess" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonRaizQuadrada" max="32767" attributes="0"/>
+                  <Component id="buttonInverteSinal" max="32767" attributes="0"/>
+                  <Component id="buttonLimpaTudo" max="32767" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="buttonLimpaTermo" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="buttonBackspace" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="button7" max="32767" attributes="0"/>
+                  <Component id="button8" max="32767" attributes="0"/>
+                  <Component id="button9" max="32767" attributes="0"/>
+                  <Component id="buttonPorcentagem" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="buttonDivisao" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonInverteNumero" max="32767" attributes="0"/>
+                  <Component id="buttonMultiplicacao" max="32767" attributes="0"/>
+                  <Component id="button4" max="32767" attributes="0"/>
+                  <Component id="button5" max="32767" attributes="0"/>
+                  <Component id="button6" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="button1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="button2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="button3" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="buttonSubtracao" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="button0" max="32767" attributes="0"/>
+                          <Component id="buttonPontoFlutuante" alignment="0" max="32767" attributes="0"/>
+                          <Component id="buttonAdicao" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="buttonIgual" min="-2" pref="86" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="button1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="4"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button5">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button6">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button7">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="7"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button8">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="8"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button9">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="9"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="button0">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonPontoFlutuante">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value=","/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="digitosClique"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonAdicao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="+"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleDecideOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonSubtracao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="-"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleDecideOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMultiplicacao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="*"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleDecideOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonDivisao">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="/"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleDecideOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonIgual">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ee" green="91" red="1f" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="fe" green="fe" red="fe" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="="/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleResolveOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonInverteNumero">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="1/x"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleInverteBase"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonPorcentagem">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="%"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleOperaPorcentagem"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonRaizQuadrada">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleRaizQuadrada"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonInverteSinal">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xb1;"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleInverteSinal"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonLimpaTudo">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleApagarOperacao"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonLimpaTermo">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="CE"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="apagarEntrada"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonBackspace">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;="/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleBackspace"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMC">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MC"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limpaMemoria"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMR">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MR"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chamaValorMemoria"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMS">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="MS"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salvaNaMemoria"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMPlus">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M+"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleOperacaoMemoria"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="buttonMLess">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="M-"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleOperacaoMemoria"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldDisplay">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
