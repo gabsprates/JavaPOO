@@ -13,3 +13,11 @@ Somente os códigos estão aqui, mas você pode fazer o [download do ZIP](https:
 ---
 
 Caso você tenha problema ao abrir ou compilar os projetos, [crie uma issue](https://github.com/gabsprates/JavaPOO/issues) e vamos resolver! :wink:
+
+---
+
+### Exercícios
+
+* [Jogo da Forca](./JogoDaForca)
+* [Calculadora do Windows 7](./CalcWin7)
+* [Lembretes: Exercício com Threads](./Lembretes)
