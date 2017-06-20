@@ -28,11 +28,15 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         labelTelaCadastro = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        cadastroNome = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         labelTelaCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/acervo/imagens/user.png"))); // NOI18N
         labelTelaCadastro.setText("Cadastro de Novo Usuário");
+
+        jLabel1.setText("Nome:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -40,7 +44,10 @@ public class Cadastro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(labelTelaCadastro)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelTelaCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cadastroNome))
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
@@ -48,7 +55,11 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(labelTelaCadastro)
-                .addGap(0, 230, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 162, Short.MAX_VALUE))
         );
 
         pack();
@@ -88,6 +99,8 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cadastroNome;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelTelaCadastro;
     // End of variables declaration//GEN-END:variables
 }
