@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package acervo;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 
 /**
@@ -14,24 +10,16 @@ import java.sql.Connection;
  */
 public class Acervo extends javax.swing.JFrame {
     
-    private Connection conexao;
+    private final Connection conexao;
 
     /**
      * Creates new form Acervo
+     * @throws java.sql.SQLException
      */
-    public Acervo() {
-
+    public Acervo() throws SQLException {
+        
+        this.conexao = new ConnectionFactory().getConnection();
         initComponents();
-
-//        try {
-//
-//            this.conexao = new ConnectionFactory().getConnection();
-//
-//        } catch (SQLException ex) {
-//
-//            System.out.println(Acervo.class.getName() + " :: " + ex.getMessage());
-//
-//        }
 
     }
 
@@ -48,16 +36,21 @@ public class Acervo extends javax.swing.JFrame {
         login = new javax.swing.JTextField();
         labelLogin = new javax.swing.JLabel();
         labelSenha = new javax.swing.JLabel();
-        senha = new javax.swing.JTextField();
         entrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         labelAindaNaoCadastrado = new javax.swing.JLabel();
         cadastre_se = new javax.swing.JButton();
+        senha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Acervo Pessoal de Livros");
         setLocationByPlatform(true);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                fecharPrograma(evt);
+            }
+        });
 
         labelTelaLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/acervo/imagens/books.png"))); // NOI18N
         labelTelaLogin.setText("Acervo Pessoal de Livros");
@@ -92,17 +85,14 @@ public class Acervo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelAindaNaoCadastrado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelAindaNaoCadastrado, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(labelSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(0, 0, 0)
-                                        .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, 0))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(login, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(senha)))
                             .addComponent(jSeparator1)
                             .addComponent(entrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelTelaLogin)))
@@ -121,9 +111,9 @@ public class Acervo extends javax.swing.JFrame {
                     .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(entrar)
                 .addGap(18, 18, 18)
@@ -144,8 +134,27 @@ public class Acervo extends javax.swing.JFrame {
     }//GEN-LAST:event_fazerLogin
 
     private void abrirCadastro(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirCadastro
-        // TODO add your handling code here:
+        
+        Cadastro telaCadastro;
+
+        try {
+
+            telaCadastro = new Cadastro(this.conexao);
+            telaCadastro.setVisible(true);
+
+        } catch (SQLException ex) {
+            
+        }
+        
     }//GEN-LAST:event_abrirCadastro
+
+    private void fecharPrograma(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_fecharPrograma
+        try {
+            this.conexao.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }//GEN-LAST:event_fecharPrograma
 
     /**
      * @param args the command line arguments
@@ -176,7 +185,13 @@ public class Acervo extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Acervo().setVisible(true);
+            
+            try {
+                new Acervo().setVisible(true);
+            } catch (SQLException ex) {
+                Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
+            }
+
         });
     }
 
@@ -188,6 +203,6 @@ public class Acervo extends javax.swing.JFrame {
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelSenha;
     private javax.swing.JTextField login;
-    private javax.swing.JTextField senha;
+    private javax.swing.JPasswordField senha;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,15 +2,16 @@ package acervo;
 
 /**
  *
- * @author contass
+ * @author gabriel
  */
 class User {
-    private int id;
+    private Integer id;
     private String nome;
     private String user;
     private String senha;
     
     User(String nome, String user, String senha) {
+        this.id = null;
         this.nome = nome;
         this.user = user;
         this.senha = senha;

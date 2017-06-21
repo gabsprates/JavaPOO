@@ -17,40 +17,50 @@ public class Users {
         this.conexao = conexao;
     }
     
-    
-    public ArrayList<Livros> getUsers() {
-        return new ArrayList<>();
+    /**
+     * Busca usuário por ID
+     * @param id
+     * @return
+     */
+    public User getUserBy(Integer id) {
+        return null;
     }
     
-    
-    public void inserir(User user) {
+
+    /**
+     * Busca usuário por username
+     * @param username
+     * @return
+     */
+    public User getUserBy(String username) {
+        return null;
+    }
+
+
+    /**
+     * Insere um novo usuário
+     * @param user
+     * @throws SQLException 
+     */
+    public void inserir(User user) throws SQLException {
         
         String SQL = "INSERT INTO users "
                 + " (nome, user, senha) "
                 + " VALUES (?, ?, ?) ";
         
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
 
-        try {
+        stmt = this.conexao.prepareStatement(SQL);
 
-            stmt = this.conexao.prepareStatement(SQL);
+        stmt.setString(1, user.getNome());
+        stmt.setString(2, user.getUser());
+        stmt.setString(3, user.getSenha());
 
-            stmt.setString(0, user.getNome());
-            stmt.setString(1, user.getUser());
-            stmt.setString(2, user.getSenha());
-            
-            boolean executou = stmt.execute();
-            
-            if (!executou) {
-                throw new SQLException("deu erro aqui");
-            }
+        stmt.execute();
 
-        } catch (SQLException ex) {
-
-            System.out.println(Users.class.getName() + " :: " + ex.getMessage());
-
-        }
-        
     }
+    
+    
+    
     
 }
