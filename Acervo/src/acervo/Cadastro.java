@@ -46,9 +46,9 @@ public class Cadastro extends javax.swing.JFrame {
         labelTelaCadastro = new javax.swing.JLabel();
         labelNome = new javax.swing.JLabel();
         cadastroNome = new javax.swing.JTextField();
-        labelUsuario = new javax.swing.JLabel();
-        cadastroUsuario = new javax.swing.JTextField();
-        labelUsuario1 = new javax.swing.JLabel();
+        labelLogin = new javax.swing.JLabel();
+        cadastroLogin = new javax.swing.JTextField();
+        labelSenha = new javax.swing.JLabel();
         cadastroSenha = new javax.swing.JTextField();
         cadastroSalvar = new javax.swing.JButton();
         cadastroCancelar = new javax.swing.JButton();
@@ -62,15 +62,15 @@ public class Cadastro extends javax.swing.JFrame {
 
         labelNome.setText("Nome:");
 
-        labelUsuario.setText("Usuário:");
+        labelLogin.setText("Login:");
 
-        cadastroUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+        cadastroLogin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 validaTamanhoString(evt);
             }
         });
 
-        labelUsuario1.setText("Senha:");
+        labelSenha.setText("Senha:");
 
         cadastroSenha.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -106,9 +106,9 @@ public class Cadastro extends javax.swing.JFrame {
                     .addComponent(labelTelaCadastro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(labelNome, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cadastroNome, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cadastroUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelUsuario1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelLogin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cadastroLogin, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cadastroSenha, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(20, 20, 20))
         );
@@ -122,11 +122,11 @@ public class Cadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(labelUsuario)
+                .addComponent(labelLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastroUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cadastroLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(labelUsuario1)
+                .addComponent(labelSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastroSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -148,7 +148,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         String nome = this.cadastroNome.getText();
         String senha = this.cadastroSenha.getText();
-        String username = this.cadastroUsuario.getText();
+        String username = this.cadastroLogin.getText();
         
         try {
 
@@ -190,13 +190,13 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastroCancelar;
+    private javax.swing.JTextField cadastroLogin;
     private javax.swing.JTextField cadastroNome;
     private javax.swing.JButton cadastroSalvar;
     private javax.swing.JTextField cadastroSenha;
-    private javax.swing.JTextField cadastroUsuario;
+    private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelNome;
+    private javax.swing.JLabel labelSenha;
     private javax.swing.JLabel labelTelaCadastro;
-    private javax.swing.JLabel labelUsuario;
-    private javax.swing.JLabel labelUsuario1;
     // End of variables declaration//GEN-END:variables
 }
