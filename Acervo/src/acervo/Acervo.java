@@ -130,7 +130,33 @@ public class Acervo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fazerLogin(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fazerLogin
-        // TODO add your handling code here:
+        
+        Users usuarios = new Users(this.conexao);
+        
+        try {
+
+            User userLogin = usuarios.getUserBy(this.login.getText());
+            
+            if (userLogin == null) {
+
+                throw new Exception("Nenhum usuário com este login");
+
+            } else if (!new String(this.senha.getPassword()).equals(userLogin.getSenha())) {
+
+                throw new Exception("Senha incorreta");
+
+            }
+
+            this.login.setText("");
+            this.senha.setText("");
+            System.out.println("LOGIN EFETUADO COM SUCESSO!!");
+
+        } catch (SQLException ex) {
+            Dialogs.erro(ex.getMessage(), "Erro com o banco de dados");
+        } catch (Exception ex) {
+            Dialogs.erro(ex.getMessage(), "Erro de login");
+        }
+        
     }//GEN-LAST:event_fazerLogin
 
     private void abrirCadastro(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirCadastro

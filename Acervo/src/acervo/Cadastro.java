@@ -1,6 +1,5 @@
 package acervo;
 
-import java.awt.Component;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JTextField;
@@ -22,7 +21,6 @@ public class Cadastro extends javax.swing.JFrame {
     public Cadastro(Connection conexao) throws SQLException {
         
         this.conexao = conexao;
-
         initComponents();
 
     }
@@ -154,8 +152,12 @@ public class Cadastro extends javax.swing.JFrame {
         
         try {
 
-            Users usuarios  = new Users(this.conexao);
-            User novoUser   = new User(nome, username, senha);
+            User novoUser = new User();
+            novoUser.setNome(nome);
+            novoUser.setSenha(senha);
+            novoUser.setUser(username);
+
+            Users usuarios = new Users(this.conexao);
             usuarios.inserir(novoUser);
             
             Dialogs.sucesso("Usuário inserido com sucesso!", "Sucesso");
@@ -182,8 +184,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         }
         
-        System.out.println(campo.getText());
-
     }//GEN-LAST:event_validaTamanhoString
 
 

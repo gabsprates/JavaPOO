@@ -10,11 +10,8 @@ class User {
     private String user;
     private String senha;
     
-    User(String nome, String user, String senha) {
+    User() {
         this.id = null;
-        this.nome = nome;
-        this.user = user;
-        this.senha = senha;
     }
 
 
@@ -52,5 +49,12 @@ class User {
     public String getUser() {
         return user;
     }
- 
+
+    @Override
+    public String toString() {
+        return this.getNome()
+                + " :: " + this.getUser()
+                + "(" + this.getId() + ")";
+    }
+
 }
