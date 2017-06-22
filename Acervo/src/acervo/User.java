@@ -56,5 +56,10 @@ class User {
                 + " :: " + this.getUser()
                 + "(" + this.getId() + ")";
     }
+    
+    
+    public boolean validaSenha(String senha){
+        return this.senha.equals(senha);
+    }
 
 }

@@ -136,12 +136,13 @@ public class Acervo extends javax.swing.JFrame {
         try {
 
             User userLogin = usuarios.getUserBy(this.login.getText());
+            String senhaDigitada = new String(this.senha.getPassword());
             
             if (userLogin == null) {
 
                 throw new Exception("Nenhum usuário com este login");
 
-            } else if (!new String(this.senha.getPassword()).equals(userLogin.getSenha())) {
+            } else if (!userLogin.validaSenha(senhaDigitada)) {
 
                 throw new Exception("Senha incorreta");
 
@@ -149,7 +150,13 @@ public class Acervo extends javax.swing.JFrame {
 
             this.login.setText("");
             this.senha.setText("");
-            System.out.println("LOGIN EFETUADO COM SUCESSO!!");
+            
+            Perfil perfil = new Perfil(userLogin);
+            perfil.setConnection(this.conexao);
+            perfil.setVisible(true);
+
+            this.setVisible(false);
+            this.dispose();
 
         } catch (SQLException ex) {
             Dialogs.erro(ex.getMessage(), "Erro com o banco de dados");
@@ -169,7 +176,7 @@ public class Acervo extends javax.swing.JFrame {
             telaCadastro.setVisible(true);
 
         } catch (SQLException ex) {
-            
+            System.out.println(ex.getMessage());
         }
         
     }//GEN-LAST:event_abrirCadastro
