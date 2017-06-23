@@ -161,7 +161,7 @@ public class EdicaoUser extends javax.swing.JFrame {
     private void validaTamanhoString(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_validaTamanhoString
 
         JTextField campo = (JTextField) evt.getComponent();
-        System.out.println(campo.getText());
+
         if (campo.getText().length() > 10) {
 
             Dialogs.erro("Este campo não pode conter mais de 10 caracteres.", "Erro");

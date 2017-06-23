@@ -9,7 +9,7 @@ import java.sql.Connection;
 public class Perfil extends javax.swing.JFrame {
 
     private Connection conexao;
-    private User usuario;
+    private final User usuario;
     
     /**
      * Creates new form Perfil

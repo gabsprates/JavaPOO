@@ -223,11 +223,7 @@ public class Acervo extends javax.swing.JFrame {
             
             try {
                 new Acervo().setVisible(true);
-            } catch (SQLException ex) {
-                Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
-            } catch (FileNotFoundException ex) {
-                Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
-            } catch (IOException ex) {
+            } catch (Exception ex) {
                 Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
             }
 
