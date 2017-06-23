@@ -27,10 +27,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     
     private void fecharCadastro() {
-
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.dispose();
-        
     }
     
     

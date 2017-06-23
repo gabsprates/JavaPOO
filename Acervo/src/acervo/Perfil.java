@@ -45,7 +45,7 @@ public class Perfil extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         labelAcoes = new javax.swing.JLabel();
         editarDados = new javax.swing.JButton();
-        novoLivro = new javax.swing.JButton();
+        btnNovoLivro = new javax.swing.JButton();
         buscarLivro = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         sair = new javax.swing.JButton();
@@ -71,8 +71,13 @@ public class Perfil extends javax.swing.JFrame {
             }
         });
 
-        novoLivro.setText("Inserir novo livro");
-        novoLivro.setToolTipText("");
+        btnNovoLivro.setText("Inserir novo livro");
+        btnNovoLivro.setToolTipText("");
+        btnNovoLivro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                handleNovoLivro(evt);
+            }
+        });
 
         buscarLivro.setText("Buscar livro");
         buscarLivro.setToolTipText("");
@@ -98,7 +103,7 @@ public class Perfil extends javax.swing.JFrame {
                     .addComponent(jSeparator2)
                     .addComponent(labelNome, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
                     .addComponent(editarDados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(novoLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNovoLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buscarLivro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator3)
                     .addComponent(sair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -122,7 +127,7 @@ public class Perfil extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(editarDados, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(novoLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNovoLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buscarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -153,8 +158,17 @@ public class Perfil extends javax.swing.JFrame {
         
     }//GEN-LAST:event_editarDados
 
+    private void handleNovoLivro(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_handleNovoLivro
+        
+        NovoLivro novoLivro = new NovoLivro(this.usuario);
+        novoLivro.setConnection(this.conexao);
+        novoLivro.setVisible(true);
+        
+    }//GEN-LAST:event_handleNovoLivro
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNovoLivro;
     private javax.swing.JButton buscarLivro;
     private javax.swing.JButton editarDados;
     private javax.swing.JSeparator jSeparator1;
@@ -164,7 +178,6 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelTitleLogin;
-    private javax.swing.JButton novoLivro;
     private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
 }

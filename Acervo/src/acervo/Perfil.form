@@ -35,7 +35,7 @@
                   <Component id="jSeparator2" max="32767" attributes="0"/>
                   <Component id="labelNome" alignment="0" pref="267" max="32767" attributes="0"/>
                   <Component id="editarDados" max="32767" attributes="0"/>
-                  <Component id="novoLivro" max="32767" attributes="0"/>
+                  <Component id="btnNovoLivro" max="32767" attributes="0"/>
                   <Component id="buscarLivro" max="32767" attributes="0"/>
                   <Component id="jSeparator3" max="32767" attributes="0"/>
                   <Component id="sair" max="32767" attributes="0"/>
@@ -62,7 +62,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="editarDados" min="-2" pref="29" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="novoLivro" min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="btnNovoLivro" min="-2" pref="29" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="buscarLivro" min="-2" pref="29" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -114,11 +114,14 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarDados"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="novoLivro">
+    <Component class="javax.swing.JButton" name="btnNovoLivro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Inserir novo livro"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="handleNovoLivro"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buscarLivro">
       <Properties>
