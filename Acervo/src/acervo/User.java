@@ -11,7 +11,7 @@ class User {
     private String senha;
     
     User() {
-        this.id = null;
+        this.id = -1;
     }
 
 

@@ -1,5 +1,7 @@
 package acervo;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -16,7 +18,7 @@ public class Acervo extends javax.swing.JFrame {
      * Creates new form Acervo
      * @throws java.sql.SQLException
      */
-    public Acervo() throws SQLException {
+    public Acervo() throws SQLException, FileNotFoundException, IOException {
         
         this.conexao = new ConnectionFactory().getConnection();
         initComponents();
@@ -222,6 +224,10 @@ public class Acervo extends javax.swing.JFrame {
             try {
                 new Acervo().setVisible(true);
             } catch (SQLException ex) {
+                Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
+            } catch (FileNotFoundException ex) {
+                Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
+            } catch (IOException ex) {
                 Dialogs.erro(ex.getMessage(), "Erro ao executar programa");
             }
 

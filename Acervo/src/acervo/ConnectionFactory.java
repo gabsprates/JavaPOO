@@ -1,8 +1,12 @@
 package acervo;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 
 /**
@@ -11,17 +15,22 @@ import java.sql.SQLException;
  */
 public class ConnectionFactory {
     
-    private final String hostaddr = "172.17.0.2";
-    private final String hostport = "3306";
-    private final String database = "acervo";
-    private final String username = "root";
-    private final String password = "teste";
-    
-    public Connection getConnection() throws SQLException {
-    
-        String url = "jdbc:mysql://" + this.hostaddr + '/' + this.database;
+    public Connection getConnection() throws SQLException, FileNotFoundException, IOException {
 
-        return DriverManager.getConnection(url, this.username, this.password);
+        FileInputStream file = new FileInputStream("ConfigDB.xml");
+
+        Properties props = new Properties();        
+        props.loadFromXML(file);
+        
+        String hostaddr = props.getProperty("hostaddr");
+        String hostport = props.getProperty("hostport");
+        String database = props.getProperty("database");
+        String username = props.getProperty("username");
+        String password = props.getProperty("password");
+        
+        String url = "jdbc:mysql://" + hostaddr + ':' + hostport + '/' + database;
+
+        return DriverManager.getConnection(url, username, password);
     
     }
 

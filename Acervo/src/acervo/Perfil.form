@@ -110,6 +110,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Editar meus dados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarDados"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="novoLivro">
       <Properties>

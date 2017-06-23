@@ -86,6 +86,26 @@ public class Users {
     }
     
     
-    
+    public void atualizar(User user) throws SQLException, Exception {
+        
+        String SQL = " UPDATE " + this.tabela
+                + " SET nome = ? , senha = ? "
+                + " WHERE id = ? ";
+        
+        PreparedStatement stmt;
+        
+        stmt = this.conexao.prepareStatement(SQL);
+        
+        if(user.getId() < 0) {
+            throw new Exception("Usuário inconsistente. Impossível realizar alteração.");
+        }
+        
+        stmt.setString(1, user.getNome());
+        stmt.setString(2, user.getSenha());
+        stmt.setInt(3, user.getId());
+        
+        stmt.execute();
+        
+    }
     
 }

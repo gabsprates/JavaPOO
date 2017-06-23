@@ -9,6 +9,7 @@ import java.sql.Connection;
 public class Perfil extends javax.swing.JFrame {
 
     private Connection conexao;
+    private User usuario;
     
     /**
      * Creates new form Perfil
@@ -17,6 +18,7 @@ public class Perfil extends javax.swing.JFrame {
     public Perfil(User usuario) {
         
         initComponents();
+        this.usuario = usuario;
         this.labelNome.setText(usuario.getNome());
         this.labelLogin.setText(usuario.getUser());
 
@@ -63,6 +65,11 @@ public class Perfil extends javax.swing.JFrame {
         labelAcoes.setText("Opções:");
 
         editarDados.setText("Editar meus dados");
+        editarDados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarDados(evt);
+            }
+        });
 
         novoLivro.setText("Inserir novo livro");
         novoLivro.setToolTipText("");
@@ -135,6 +142,16 @@ public class Perfil extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_fecharSistema
+
+    private void editarDados(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarDados
+        
+        EdicaoUser edicaoUser = new EdicaoUser(this.usuario);
+        edicaoUser.setConnection(this.conexao);
+        edicaoUser.setVisible(true);
+        
+        this.dispose();
+        
+    }//GEN-LAST:event_editarDados
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

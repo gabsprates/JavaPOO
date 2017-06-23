@@ -1,0 +1,13 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- 
+    Os dados aqui são fictícios.
+    Você deve configurar os valores reais 
+    para acessar a sua base de dados.
+-->
+<properties>
+    <entry key="hostaddr">127.0.0.1</entry>
+    <entry key="hostport">3306</entry>
+    <entry key="database">acervo</entry>
+    <entry key="username">root</entry>
+    <entry key="password"></entry>
+</properties>
