@@ -18,4 +18,8 @@ class Dialogs {
         JOptionPane.showMessageDialog(null, msg, titulo, JOptionPane.INFORMATION_MESSAGE);
     }
 
+    static int confirm (String msg, String titulo) {
+        return JOptionPane.showConfirmDialog(null, msg, titulo, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+    }
+
 }

@@ -81,6 +81,11 @@ public class Perfil extends javax.swing.JFrame {
 
         buscarLivro.setText("Buscar livro");
         buscarLivro.setToolTipText("");
+        buscarLivro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarLivros(evt);
+            }
+        });
 
         sair.setText("Sair do sistema");
         sair.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +170,16 @@ public class Perfil extends javax.swing.JFrame {
         novoLivro.setVisible(true);
         
     }//GEN-LAST:event_handleNovoLivro
+
+    private void buscarLivros(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarLivros
+        
+        Livros livros = new Livros(this.conexao);
+        livros.setUsuario(this.usuario);
+        
+        BuscaLivros busca = new BuscaLivros(livros);
+        busca.setVisible(true);
+        
+    }//GEN-LAST:event_buscarLivros
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

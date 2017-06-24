@@ -3,7 +3,6 @@ package acervo;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JTextField;
-import javax.swing.WindowConstants;
 
 /**
  *

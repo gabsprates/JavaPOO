@@ -188,7 +188,7 @@ public class EdicaoUser extends javax.swing.JFrame {
             }
 
             this.usuario.setNome(this.userNome.getText());
-            this.usuario.setSenha(this.userSenha.getText());
+            this.usuario.setSenha(new String(this.userSenha.getPassword()));
 
             Users usuarios = new Users(this.conexao);
             usuarios.atualizar(usuario);

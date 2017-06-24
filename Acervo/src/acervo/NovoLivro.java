@@ -47,6 +47,7 @@ public class NovoLivro extends javax.swing.JFrame {
         cancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         labelTituloNovoLivro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/acervo/imagens/book.png"))); // NOI18N
         labelTituloNovoLivro.setText("Novo livro");
@@ -112,6 +113,7 @@ public class NovoLivro extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void handleCancela(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_handleCancela
@@ -132,7 +134,19 @@ public class NovoLivro extends javax.swing.JFrame {
                 throw new Exception("Preencha os campos corretamente!");
             }
             
+            Livros livros = new Livros(this.conexao);
+            livros.setUsuario(this.usuario);
             
+            Livro novoLivro = new Livro();
+            novoLivro.setUserId(userID);
+            novoLivro.setTitulo(titulo);
+            novoLivro.setAutor(autor);
+            
+            livros.inserir(novoLivro);
+            
+            Dialogs.sucesso("Livro inserido no acervo!", "Sucesso");
+            
+            this.dispose();
             
         } catch (Exception e) {
             
